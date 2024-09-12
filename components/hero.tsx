@@ -57,7 +57,7 @@ export default function Hero() {
           >
             NextUI template its here!
           </Chip>
-          <h1 className="text-4xl font-ligt tracking-tighter mx-auto md:text-6xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text text-pretty">
+          <h1 className="text-4xl font-ligt tracking-tighter mx-auto md:text-6xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text text-pretty">
             Use Nextjs and{" "}
             <span className="bg-gradient-to-t from-light to-foreground text-transparent bg-clip-text border-none">
               NextUI
@@ -67,47 +67,44 @@ export default function Hero() {
           <p className="max-w-2xl mx-auto text-foreground/80 text-balance">
             Create your website with NextUI and Nextjs, the best UI Framework.
           </p>
-          <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <Button onPress={onOpen} color="primary" variant="solid">
-                Get Started
-              </Button>
-              <Modal
-                isOpen={isOpen}
-                placement="center"
-                onOpenChange={onOpenChange}
-              >
-                <ModalContent>
-                  {(onClose) => (
-                    <>
-                      <ModalHeader className="flex flex-col gap-1">
-                        Start using NextUI
-                      </ModalHeader>
-                      <ModalBody>
-                        <p>
-                          NextUI it&apos;s a high customizable component library
-                          to build faster, beautiful, and more accessible NextJs
-                          applications.
-                        </p>
-                      </ModalBody>
-                      <ModalFooter>
-                        <Button color="danger" variant="flat" onPress={onClose}>
-                          Close
-                        </Button>
-                        <Button
-                          color="primary"
-                          variant="solid"
-                          onPress={onClose}
-                        >
-                          Action
-                        </Button>
-                      </ModalFooter>
-                    </>
-                  )}
-                </ModalContent>
-              </Modal>
-            </motion.div>
-          </div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0"
+          >
+            <Button onPress={onOpen} color="primary" variant="solid">
+              Get Started
+            </Button>
+            <Modal
+              isOpen={isOpen}
+              placement="center"
+              onOpenChange={onOpenChange}
+            >
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex flex-col gap-1">
+                      Start using NextUI
+                    </ModalHeader>
+                    <ModalBody>
+                      <p>
+                        NextUI it&apos;s a high customizable component library
+                        to build faster, beautiful, and more accessible NextJs
+                        applications.
+                      </p>
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button color="danger" variant="flat" onPress={onClose}>
+                        Close
+                      </Button>
+                      <Button color="primary" variant="solid" onPress={onClose}>
+                        Action
+                      </Button>
+                    </ModalFooter>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
+          </motion.div>
         </motion.div>
       </section>
       <motion.div

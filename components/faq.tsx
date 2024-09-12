@@ -17,7 +17,7 @@ export default function Faq() {
         transition={{ duration: 1, delay: 0.5 }}
         className="flex flex-col gap-3 justify-center items-center"
       >
-        <h4 className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
+        <h4 className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
           FAQ
         </h4>
         <p className="max-w-xl text-foreground/80 text-center">

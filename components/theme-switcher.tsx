@@ -2,19 +2,19 @@
 import { Button } from "@nextui-org/react";
 import { useState } from "react";
 import { useTheme } from "next-themes";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export default function ThemeSwitcher() {
-  const [svg, setSvg] = useState(<MoonIcon size={24} />);
+  const [svg, setSvg] = useState(<MoonIcon />);
   const { theme, setTheme } = useTheme();
 
   const handleClick = () => {
     if (theme === "light") {
       setTheme("dark");
-      setSvg(<MoonIcon size={24} />);
+      setSvg(<MoonIcon />);
     } else {
       setTheme("light");
-      setSvg(<SunIcon size={24} />);
+      setSvg(<SunIcon />);
     }
   };
 

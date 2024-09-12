@@ -10,7 +10,7 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 import { Button } from "@nextui-org/button";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "@/components/theme-switcher";
 import {
   Dropdown,
   DropdownTrigger,
@@ -18,13 +18,13 @@ import {
   DropdownItem,
 } from "@nextui-org/dropdown";
 import {
-  AppWindow,
-  ChevronDown,
-  Contact2,
-  TimerReset,
-  User2,
-  Webhook,
-} from "lucide-react";
+  ChevronDownIcon,
+  FaceIcon,
+  GlobeIcon,
+  OpenInNewWindowIcon,
+  PersonIcon,
+  TimerIcon,
+} from "@radix-ui/react-icons";
 
 export default function NavBar() {
   const menuItems = ["docs", "features", "pricing", "blog"];
@@ -55,7 +55,7 @@ export default function NavBar() {
         <NavbarItem>
           <Dropdown>
             <DropdownTrigger>
-              <Button endContent={<ChevronDown size={16} />} variant="light">
+              <Button endContent={<ChevronDownIcon />} variant="light">
                 Features
               </Button>
             </DropdownTrigger>
@@ -69,35 +69,35 @@ export default function NavBar() {
               <DropdownItem
                 key="autoscaling"
                 description="ACME scales apps to meet user demand, automagically, based on load."
-                startContent={<AppWindow size={24} />}
+                startContent={<OpenInNewWindowIcon />}
               >
                 Autoscaling
               </DropdownItem>
               <DropdownItem
                 key="usage_metrics"
                 description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-                startContent={<User2 size={24} />}
+                startContent={<PersonIcon />}
               >
                 Usage Metrics
               </DropdownItem>
               <DropdownItem
                 key="production_ready"
                 description="ACME runs on ACME, join us and others serving requests at web scale."
-                startContent={<Webhook size={24} />}
+                startContent={<GlobeIcon />}
               >
                 Production Ready
               </DropdownItem>
               <DropdownItem
                 key="99_uptime"
                 description="Applications stay on the grid with high availability and high uptime guarantees."
-                startContent={<TimerReset size={24} />}
+                startContent={<TimerIcon />}
               >
                 +99% Uptime
               </DropdownItem>
               <DropdownItem
                 key="supreme_support"
                 description="Overcome any challenge with a supporting team ready to respond."
-                startContent={<Contact2 size={24} />}
+                startContent={<FaceIcon />}
               >
                 +Supreme Support
               </DropdownItem>

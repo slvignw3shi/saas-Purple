@@ -13,7 +13,7 @@ export default function Partners() {
         }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-2xl font-light tracking-tighter sm:text-3xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text text-pretty"
+        className="text-2xl font-light tracking-tighter sm:text-3xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text text-pretty"
       >
         Our Partners
       </motion.h2>

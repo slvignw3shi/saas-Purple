@@ -1,6 +1,6 @@
-import { Divider } from "@nextui-org/divider";
 import { Button } from "@nextui-org/button";
-import { Github, Twitter } from "lucide-react";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+
 export default function Footer() {
   return (
     <footer className="pt-24">
@@ -19,7 +19,7 @@ export default function Footer() {
           </p>
           <a href="https://github.com/gonzalochale" target="_blank">
             <Button isIconOnly variant="light">
-              <Github size={24} />
+              <GitHubLogoIcon />
             </Button>
           </a>
         </div>
