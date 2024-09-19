@@ -65,7 +65,7 @@ export default function Pricing() {
             <Card
               key={idx}
               shadow="none"
-              className={`relative rounded-[20px] p-[2px] ${
+              className={`relative rounded-[20px] p-[2px] will-change-transform ${
                 item.isMostPop ? "sm:scale-110" : ""
               }`}
             >
