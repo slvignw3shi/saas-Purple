@@ -53,7 +53,7 @@ export default function Pricing() {
         className="max-w-screen-xl mx-auto px-4 md:px-8"
       >
         <div className="relative max-w-xl mx-auto text-center">
-          <h3 className="text-2xl font-light tracking-tighter sm:text-3xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text text-pretty">
+          <h3 className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
             Pricing Plans for your business
           </h3>
           <p className="mt-3 max-w-xl text-muted-foreground text-balance">
@@ -72,9 +72,9 @@ export default function Pricing() {
               {item.isMostPop ? (
                 <span className="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#016FEE_70%,#C7DBFB_100%)]" />
               ) : (
-                <span className="absolute inset-[-1000%] bg-[#dbdbdb] dark:bg-[#1c1c1c]" />
+                <span className="absolute inset-[-1000%] bg-border" />
               )}
-              <div className="z-[2] flex flex-col justify-between w-full h-full bg-background rounded-[18px] p-5">
+              <div className="z-[2] flex flex-col justify-between w-full h-full bg-card rounded-[18px] p-5">
                 <CardBody className="w-full flex items-start gap-3">
                   <div className="flex flex-col">
                     <h4 className="text-xl font-light">{item.name}</h4>

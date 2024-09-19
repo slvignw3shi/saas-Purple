@@ -26,12 +26,9 @@ export default function Hero() {
           transition={{ duration: 0.6, type: "spring", bounce: 0 }}
           className="flex flex-col justify-center items-center space-y-5 max-w-4xl mx-auto text-center"
         >
-          <div className="relative flex overflow-hidden p-[1px] bg-transparent rounded-[15px]">
-            <span className="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#016FEE_70%,#C7DBFB_100%)]" />
-            <span className="z-[2] h-full w-full flex gap-2 items-center justify-center text-sm bg-background rounded-[14px] px-2 py-1">
-              NextUI template its here!
-            </span>
-          </div>
+          <span className="w-fit h-full text-sm bg-card px-2 py-1 border border-border rounded-full">
+            NextUI template its here!
+          </span>
           <h1 className="text-4xl font-medium tracking-tighter mx-auto md:text-6xl text-pretty ">
             Use Nextjs and NextUI to build your website
           </h1>

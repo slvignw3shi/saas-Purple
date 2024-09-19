@@ -3,24 +3,77 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { motion } from "framer-motion";
 
 export default function Faq() {
-  const defaultContent =
-    "Here is the content of the accordion. You can put any elements here.";
+  const accordionItems = [
+    {
+      title: "This template is Free?",
+      content: (
+        <div className="text-muted-foreground">
+          Yes, this template is free. You can use it for personal or commercial
+          purposes.
+        </div>
+      ),
+    },
+    {
+      title: "There are more templates?",
+      content: (
+        <div className="text-muted-foreground">
+          Yes, there are more templates available. You can find them here:{" "}
+          <a
+            href="https://x.com/gonzalochale"
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary underline"
+          >
+            gonzalochale.dev
+          </a>
+        </div>
+      ),
+    },
+    {
+      title: "How can I use this template?",
+      content: (
+        <div className="text-muted-foreground">
+          You can use this template by cloning it from{" "}
+          <a
+            href="https://github.com/gonzalochale/nextui-saas-landing-template"
+            className="text-primary underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          .
+        </div>
+      ),
+    },
+    {
+      title: "How can I contribute to this template?",
+      content: (
+        <div className="text-muted-foreground">
+          You can contribute to this template by forking it on GitHub and
+          submitting a pull request. You can also report any issues or bugs you
+          encounter while using the template.
+        </div>
+      ),
+    },
+  ];
+
   return (
     <section className="relative max-w-screen-xl mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
       <motion.div
-        initial={{ y: 5, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         whileInView={{
           y: 0,
           opacity: 1,
         }}
         viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.5, type: "spring", bounce: 0 }}
         className="flex flex-col gap-3 justify-center items-center"
       >
         <h4 className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
           FAQ
         </h4>
-        <p className="max-w-xl text-foreground/80 text-center">
+        <p className="max-w-xl text-muted-foreground text-center">
           Here are some of our frequently asked questions. If you have any other
           questions you’d like answered please feel free to email us.
         </p>
@@ -33,9 +86,12 @@ export default function Faq() {
         }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 1 }}
-        className="max-w-2xl w-full border border-foreground/50 rounded-md p-1"
+        className="max-w-lg w-full"
       >
         <Accordion
+          fullWidth
+          selectionMode="multiple"
+          variant="splitted"
           motionProps={{
             variants: {
               enter: {
@@ -73,15 +129,16 @@ export default function Faq() {
             },
           }}
         >
-          <AccordionItem key="1" aria-label="¿Why NextUI?" title="¿Why NextUI">
-            {defaultContent}
-          </AccordionItem>
-          <AccordionItem key="2" aria-label="¿Why NextUI?" title="¿Why NextUI?">
-            {defaultContent}
-          </AccordionItem>
-          <AccordionItem key="3" aria-label="¿Why NextUI?" title="¿Why NextUI?">
-            {defaultContent}
-          </AccordionItem>
+          {accordionItems.map((item, index) => (
+            <AccordionItem
+              key={index}
+              aria-label={item.title}
+              title={item.title}
+              className="text-muted-foreground"
+            >
+              {item.content}
+            </AccordionItem>
+          ))}
         </Accordion>
       </motion.div>
     </section>
