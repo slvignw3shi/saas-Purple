@@ -193,19 +193,22 @@ export default function Partners() {
   ];
 
   return (
-    <section className="max-w-screen-md w-full mx-auto px-4 py-24 gap-12 md:px-8 flex flex-col justify-center items-center">
-      <motion.h2
-        initial={{ y: 20, opacity: 0 }}
+    <section className="max-w-screen-md w-full mx-auto px-4 py-24 gap-10 md:px-8 flex flex-col justify-center items-center text-center">
+      <motion.div
+        initial={{ y: 20, opacity: 0, filter: "blur(3px)" }}
         whileInView={{
           y: 0,
           opacity: 1,
+          filter: "blur(0px)",
         }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, type: "spring", bounce: 0 }}
-        className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text"
+        className="flex flex-col gap-3"
       >
-        Our Partners
-      </motion.h2>
+        <h2 className="text-xl font-semibold sm:text-2xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
+          Our Partners
+        </h2>
+      </motion.div>
       <div className="w-full grid grid-cols-3 sm:grid-cols-6 grid-rows-3 sm:grid-rows-1 gap-5 place-items-center">
         {icons.map((icon, index) => (
           <Tooltip content={icon.name} key={icon.name}>

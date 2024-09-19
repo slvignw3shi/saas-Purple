@@ -59,35 +59,25 @@ export default function Faq() {
   ];
 
   return (
-    <section className="relative max-w-screen-xl mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
-      <motion.div
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{
-          y: 0,
-          opacity: 1,
-        }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.5, type: "spring", bounce: 0 }}
-        className="flex flex-col gap-3 justify-center items-center"
-      >
+    <motion.section
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.5, type: "spring", bounce: 0 }}
+      className="relative max-w-screen-xl mx-auto px-4 py-28 gap-5 md:px-8 flex flex-col justify-center items-center"
+    >
+      <div className="flex flex-col gap-3 justify-center items-center">
         <h4 className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
           FAQ
         </h4>
         <p className="max-w-xl text-muted-foreground text-center">
-          Here are some of our frequently asked questions. If you have any other
-          questions you’d like answered please feel free to email us.
+          Here are some of our frequently asked questions.
         </p>
-      </motion.div>
-      <motion.div
-        initial={{ y: 5, opacity: 0 }}
-        whileInView={{
-          y: 0,
-          opacity: 1,
-        }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 1 }}
-        className="max-w-lg w-full"
-      >
+      </div>
+      <div className="max-w-lg w-full">
         <Accordion
           fullWidth
           selectionMode="multiple"
@@ -140,7 +130,7 @@ export default function Faq() {
             </AccordionItem>
           ))}
         </Accordion>
-      </motion.div>
-    </section>
+      </div>
+    </motion.section>
   );
 }
