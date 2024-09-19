@@ -16,6 +16,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         "muted-foreground": "var(--muted-foreground)",
         light: "var(--light)",
+        card: "var(--card)",
       },
     },
   },

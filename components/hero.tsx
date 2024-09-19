@@ -1,6 +1,5 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { Chip } from "@nextui-org/chip";
 import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
 import {
@@ -11,6 +10,7 @@ import {
   ModalFooter,
 } from "@nextui-org/modal";
 import { useDisclosure } from "@nextui-org/use-disclosure";
+import { Link } from "@nextui-org/link";
 
 export default function Hero() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -18,61 +18,32 @@ export default function Hero() {
     <div className="relative justify-center items-center">
       <section className="max-w-screen-xl mx-auto px-4 py-28 gap-12 md:px-8 flex flex-col justify-center items-center">
         <motion.div
-          initial={{ y: 5, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{
             y: 0,
             opacity: 1,
           }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, type: "spring", bounce: 0 }}
           className="flex flex-col justify-center items-center space-y-5 max-w-4xl mx-auto text-center"
         >
-          <Chip
-            startContent={
-              <svg
-                className="mx-1"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 5h2" />
-                <path d="M5 4v2" />
-                <path d="M11.5 4l-.5 2" />
-                <path d="M18 5h2" />
-                <path d="M19 4v2" />
-                <path d="M15 9l-1 1" />
-                <path d="M18 13l2 -.5" />
-                <path d="M18 19h2" />
-                <path d="M19 18v2" />
-                <path d="M14 16.518l-6.518 -6.518l-4.39 9.58a1 1 0 0 0 1.329 1.329l9.579 -4.39z" />
-              </svg>
-            }
-            variant="dot"
-            color="default"
-          >
-            NextUI template its here!
-          </Chip>
-          <h1 className="text-4xl font-ligt tracking-tighter mx-auto md:text-6xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text text-pretty">
-            Use Nextjs and{" "}
-            <span className="bg-gradient-to-t from-light to-foreground text-transparent bg-clip-text border-none">
-              NextUI
-            </span>{" "}
-            to build your website
+          <div className="relative flex overflow-hidden p-[1px] bg-transparent rounded-[15px]">
+            <span className="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#016FEE_70%,#C7DBFB_100%)]" />
+            <span className="z-[2] h-full w-full flex gap-2 items-center justify-center text-sm bg-background rounded-[14px] px-2 py-1">
+              NextUI template its here!
+            </span>
+          </div>
+          <h1 className="text-4xl font-medium tracking-tighter mx-auto md:text-6xl text-pretty ">
+            Use Nextjs and NextUI to build your website
           </h1>
-          <p className="max-w-2xl mx-auto text-foreground/80 text-balance">
+          <p className="max-w-2xl text-lg mx-auto text-muted-foreground text-balance">
             Create your website with NextUI and Nextjs, the best UI Framework.
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0"
           >
-            <Button onPress={onOpen} color="primary" variant="solid">
-              Get Started
+            <Button onPress={onOpen} color="primary" variant="shadow">
+              See more
             </Button>
             <Modal
               isOpen={isOpen}
@@ -80,41 +51,47 @@ export default function Hero() {
               onOpenChange={onOpenChange}
             >
               <ModalContent>
-                {(onClose) => (
-                  <>
-                    <ModalHeader className="flex flex-col gap-1">
-                      Start using NextUI
-                    </ModalHeader>
-                    <ModalBody>
-                      <p>
-                        NextUI it&apos;s a high customizable component library
-                        to build faster, beautiful, and more accessible NextJs
-                        applications.
-                      </p>
-                    </ModalBody>
-                    <ModalFooter>
-                      <Button color="danger" variant="flat" onPress={onClose}>
-                        Close
-                      </Button>
-                      <Button color="primary" variant="solid" onPress={onClose}>
-                        Action
-                      </Button>
-                    </ModalFooter>
-                  </>
-                )}
+                <ModalHeader>Gonzalo Chalé</ModalHeader>
+                <ModalBody>
+                  I&apos;m Systems Engineer from Cancún, México, always building
+                  things for the web.
+                </ModalBody>
+                <ModalFooter>
+                  <Button
+                    as={Link}
+                    href="https://x.com/gonzalochale"
+                    color="primary"
+                    variant="solid"
+                    size="sm"
+                  >
+                    Connect on{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="none"
+                      viewBox="0 0 1200 1227"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
+                      />
+                    </svg>
+                  </Button>
+                </ModalFooter>
               </ModalContent>
             </Modal>
           </motion.div>
         </motion.div>
       </section>
       <motion.div
-        initial={{ y: 5, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.5 }}
-        className="w-full h-full absolute -top-32 flex justify-end items-center -z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 0.5, type: "spring", bounce: 0 }}
+        className="w-full h-full absolute -top-32 flex justify-end items-center pointer-events-none "
       >
         <div className="w-3/4 flex justify-center items-center">
-          <div className="w-12 h-[600px] bg-light blur-[100px] rounded-3xl max-sm:rotate-[15deg] sm:rotate-[35deg]"></div>
+          <div className="w-12 h-[600px] bg-light blur-[70px] rounded-3xl max-sm:rotate-[15deg] sm:rotate-[35deg] [will-change:transform]"></div>
         </div>
       </motion.div>
     </div>
