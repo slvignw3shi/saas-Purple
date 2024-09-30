@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
-import PlausibleProvider from "next-plausible";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Acme",
+  title: "NextUI SaaS Template",
   description: "Landing Page template using NextJs 14, NextUI, TailwindCSS.",
 };
 
@@ -25,12 +24,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const domain = process.env.NEXT_PUBLIC_DOMAIN || "";
-  const customDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_CUSTOM_DOMAIN;
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <PlausibleProvider domain={domain} customDomain={customDomain} />
+        <script
+          defer
+          src="https://analytics.gonzalochale.dev/script.js"
+          data-website-id="7cd850d3-bf70-489a-a31e-bf6d9b410ff3"
+        ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
