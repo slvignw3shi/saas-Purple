@@ -30,7 +30,7 @@ export default function RootLayout({
         <script
           defer
           src="https://analytics.gonzalochale.dev/script.js"
-          data-website-id="7cd850d3-bf70-489a-a31e-bf6d9b410ff3"
+          data-website-id="ff0ce34a-d019-4597-ab93-4fde538b33e8"
         ></script>
       </head>
       <body
