@@ -29,9 +29,8 @@ export default function RootLayout({
       <head>
         <script
           defer
-          src="https://analytics.gonzalochale.dev/script.js"
-          data-website-id="ff0ce34a-d019-4597-ab93-4fde538b33e8"
-          data-domains="nextui-saas-template.vercel.app,nextui.gonzalochale.dev"
+          data-domain="nextui.gonzalochale.dev"
+          src="https://plausible.gonzalochale.dev/js/script.outbound-links.js"
         ></script>
       </head>
       <body
