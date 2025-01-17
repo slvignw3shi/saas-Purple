@@ -1,5 +1,5 @@
 "use client";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 import { motion } from "framer-motion";
 
 export default function Faq() {
@@ -67,7 +67,7 @@ export default function Faq() {
       }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.5, type: "spring", bounce: 0 }}
-      className="relative max-w-screen-xl mx-auto px-4 py-28 gap-5 md:px-8 flex flex-col justify-center items-center"
+      className="relative w-full max-w-screen-xl mx-auto px-4 py-28 gap-5 md:px-8 flex flex-col justify-center items-center"
     >
       <div className="flex flex-col gap-3 justify-center items-center">
         <h4 className="text-2xl font-bold sm:text-3xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
@@ -77,7 +77,7 @@ export default function Faq() {
           Here are some of our frequently asked questions.
         </p>
       </div>
-      <div className="max-w-lg w-full">
+      <div className="flex w-full max-w-lg">
         <Accordion
           fullWidth
           selectionMode="multiple"

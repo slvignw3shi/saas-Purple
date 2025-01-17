@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "NextUI SaaS Template",
-  description: "Landing Page template using NextJs 14, NextUI, TailwindCSS.",
+  title: "SaaS Landing Template",
+  description: "Landing Page template.",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         <script
           defer
-          data-domain="nextui.gonzalochale.dev"
+          data-domain="saas.gonzalochale.dev"
           src="https://plausible.gonzalochale.dev/js/script.outbound-links.js"
         ></script>
       </head>

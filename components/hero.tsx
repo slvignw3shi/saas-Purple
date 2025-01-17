@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import { motion } from "framer-motion";
 import {
   Modal,
@@ -8,9 +8,9 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-} from "@nextui-org/modal";
-import { useDisclosure } from "@nextui-org/use-disclosure";
-import { Link } from "@nextui-org/link";
+} from "@heroui/modal";
+import { useDisclosure } from "@heroui/use-disclosure";
+import { Link } from "@heroui/link";
 
 export default function Hero() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -27,13 +27,13 @@ export default function Hero() {
           className="flex flex-col justify-center items-center space-y-5 max-w-4xl mx-auto text-center"
         >
           <span className="w-fit h-full text-sm bg-card px-2 py-1 border border-border rounded-full">
-            NextUI template its here!
+            New template!
           </span>
-          <h1 className="text-4xl font-medium tracking-tighter mx-auto md:text-6xl text-pretty ">
-            Use Nextjs and NextUI to build your website
+          <h1 className="text-4xl font-medium tracking-tighter mx-auto md:text-6xl text-pretty bg-gradient-to-b from-sky-800 dark:from-sky-100 to-foreground dark:to-foreground bg-clip-text text-transparent">
+            Beautiful Landing Page Template for SaaS Startups
           </h1>
           <p className="max-w-2xl text-lg mx-auto text-muted-foreground text-balance">
-            Create your website with NextUI and Nextjs, the best UI Framework.
+            Create your next landing page using this free template.
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -50,8 +50,8 @@ export default function Hero() {
               <ModalContent>
                 <ModalHeader>Gonzalo Chalé</ModalHeader>
                 <ModalBody>
-                  I&apos;m Systems Engineer from Cancún, México, always building
-                  things for the web.
+                  I&apos;m Software Engineer from Cancún, México, always
+                  building things for the web.
                 </ModalBody>
                 <ModalFooter>
                   <Button

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Tooltip } from "@nextui-org/tooltip";
+import { Tooltip } from "@heroui/tooltip";
 
 export default function Partners() {
   // svg icons provided by https://svgl.app/

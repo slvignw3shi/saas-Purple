@@ -1,7 +1,7 @@
 "use client";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
-import { Button } from "@nextui-org/button";
-import { Divider } from "@nextui-org/divider";
+import { Card, CardBody, CardFooter } from "@heroui/card";
+import { Button } from "@heroui/button";
+import { Divider } from "@heroui/divider";
 import { motion } from "framer-motion";
 
 export default function Pricing() {
@@ -64,7 +64,7 @@ export default function Pricing() {
           <Card
             key={idx}
             shadow="none"
-            className={`relative rounded-[20px] p-[2px] will-change-transform ${
+            className={`relative rounded-[20px] p-[3px] will-change-transform ${
               item.isMostPop ? "sm:scale-110" : ""
             }`}
           >
@@ -81,7 +81,12 @@ export default function Pricing() {
                     {item.desc}
                   </span>
                 </div>
-                <span className="text-2xl font-light">${item.price}</span>
+                <span className="text-2xl font-light">
+                  {item.price.toLocaleString("en-US", {
+                    style: "currency",
+                    currency: "USD",
+                  })}
+                </span>
 
                 <Divider />
 

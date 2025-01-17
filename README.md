@@ -1,8 +1,8 @@
-# NextUi SaaS landing page template
+# SaaS landing page template
 
-A Next.js 14 landing page template for SaaS applications with NextUI and Tailwind CSS.
+A Landing page template for SaaS applications.
 
-![Preview](/public/preview.png)
+![Preview](/app/opengraph-image.png)
 
 ## Table of Contents
 
@@ -15,19 +15,19 @@ A Next.js 14 landing page template for SaaS applications with NextUI and Tailwin
 
 ## Introduction
 
-This project is a starter template for SaaS applications landing page using Next.js 14, NextUI, and Tailwind CSS.
+This project is a starter template for SaaS applications landing page using Next.js 14, HeroUI, and Tailwind CSS.
 
 ## Features
 
 - Next.js 14 with server-side rendering (SSR)
-- NextUI for beautiful and responsive UI components
+- HeroUI for beautiful and responsive UI components
 - Tailwind CSS for easy styling and customization
 
 ## Getting Started
 
 To get started with this template, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/gonzalochale/nextui-saas-template.git`
+1. Clone the repository: `git clone https://github.com/gonzalochale/saas-landing-template.git`
 2. Install the dependencies: `npm install`
 3. Start the development server: `npm run dev`
 

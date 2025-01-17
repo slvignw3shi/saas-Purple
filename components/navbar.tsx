@@ -7,16 +7,16 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-} from "@nextui-org/navbar";
-import { Link } from "@nextui-org/link";
-import { Button } from "@nextui-org/button";
+} from "@heroui/navbar";
+import { Link } from "@heroui/link";
+import { Button } from "@heroui/button";
 import ThemeSwitcher from "@/components/theme-switcher";
 import {
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
-} from "@nextui-org/dropdown";
+} from "@heroui/dropdown";
 import {
   ChevronDownIcon,
   FaceIcon,
