@@ -27,7 +27,10 @@ import {
 } from "@radix-ui/react-icons";
 
 export default function NavBar() {
-  const menuItems = ["docs", "features", "pricing", "blog"];
+  const menuItems = [
+    { name: "Pricing", href: "#pricing" },
+    { name: "Testimonials", href: "#testimonials" },
+  ];
 
   return (
     <Navbar isBlurred maxWidth="xl">
@@ -54,8 +57,13 @@ export default function NavBar() {
           </a>
         </NavbarBrand>
         <NavbarItem>
-          <Button as={Link} variant="light" size="sm">
-            Navbar Item
+          <Button as={Link} href="#pricing" variant="light" size="sm">
+            Pricing
+          </Button>
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link} href="#testimonials" variant="light" size="sm">
+            Testimonials
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -147,8 +155,13 @@ export default function NavBar() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full" href="#" size="lg" color="foreground">
-              {item}
+            <Link
+              className="w-full"
+              href={item.href}
+              size="lg"
+              color="foreground"
+            >
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}

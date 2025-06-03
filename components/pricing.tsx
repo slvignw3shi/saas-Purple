@@ -42,6 +42,7 @@ export default function Pricing() {
 
   return (
     <motion.section
+      id="pricing"
       initial={{ y: 20, opacity: 0 }}
       whileInView={{
         y: 0,
