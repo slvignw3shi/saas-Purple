@@ -33,7 +33,7 @@ export default function Hero() {
             Purple Lotus
           </h1>
           <p className="max-w-2xl text-lg mx-auto text-muted-foreground text-balance">
-            "Because Breaches Aren’t an Option."
+            Because Breaches Aren’t an Option.
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}
