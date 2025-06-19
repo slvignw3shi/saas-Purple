@@ -30,10 +30,10 @@ export default function Hero() {
             New template!
           </span>
           <h1 className="text-4xl font-medium tracking-tighter mx-auto md:text-6xl text-pretty bg-gradient-to-b from-sky-800 dark:from-sky-100 to-foreground dark:to-foreground bg-clip-text text-transparent">
-            Beautiful Landing Page Template for SaaS Startups
+            Purple Lotus
           </h1>
           <p className="max-w-2xl text-lg mx-auto text-muted-foreground text-balance">
-            Create your next landing page using this free template.
+            "Because Breaches Aren’t an Option."
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}
